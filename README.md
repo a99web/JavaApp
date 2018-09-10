@@ -3,7 +3,7 @@ Sample project to store passwords in encrypted format using sqlite
 
 --------------------------------------------------------------------------------------------------------------
 
-**** Commands to run ***
+**** Commands to run ****
 
 javac SQLiteJDBC.java Main.java 
 
