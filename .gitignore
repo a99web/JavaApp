@@ -23,4 +23,5 @@
 hs_err_pid*
 
 # ignore the db folder, this folder stores the database
-./db
+db
+db/*
