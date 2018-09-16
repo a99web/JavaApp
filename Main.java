@@ -2,6 +2,9 @@ import java.io.Console;
 import java.util.Scanner;
 import java.sql.*;
 
+// private import
+import javaapp.sqlite.SQLiteJDBC;
+
 
 public class Main {
 

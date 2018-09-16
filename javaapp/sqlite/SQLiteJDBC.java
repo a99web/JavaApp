@@ -1,3 +1,5 @@
+package javaapp.sqlite;
+
 import java.sql.*;
 
 public class SQLiteJDBC {
