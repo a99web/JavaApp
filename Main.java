@@ -48,8 +48,12 @@ public class Main {
                 case 3:
                     db.selectAll();
                     break;
-
                 case 4:
+                    System.out.print("Enter id of the row to be deleted: ");
+                    int row_id = sc.nextInt();
+                    db.delete_row(row_id);
+                    break;
+                case 5:
                     System.exit(0);
 
                 default:

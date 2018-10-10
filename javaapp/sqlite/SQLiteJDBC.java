@@ -86,4 +86,17 @@ public class SQLiteJDBC {
         }
     }
 
+   public void delete_row(int row_id) {
+       String sql = "DELETE from passwords WHERE row_id=" + row_id;
+       
+       try {
+           Statement stmt  = conn.createStatement();
+           stmt.executeUpdate(sql);
+
+       } catch(SQLException e) {
+           System.out.println(e.getMessage());
+       }
+       
+   }
+
 }
