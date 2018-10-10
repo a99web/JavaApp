@@ -22,7 +22,7 @@ public class SQLiteJDBC {
        try {
               Statement statement = conn.createStatement();
               // creating the Password table
-              statement.execute("CREATE table IF NOT EXISTS passwords (service TEXT, username TEXT, password TEXT)");
+              statement.execute("CREATE table IF NOT EXISTS passwords (row_id INTEGER PRIMARY KEY AUTOINCREMENT, service TEXT, username TEXT, password TEXT)");
         } catch ( Exception e ) {
               System.err.println( e.getClass().getName() + ": " + e.getMessage() );
               System.exit(0);
@@ -73,10 +73,12 @@ public class SQLiteJDBC {
              Statement stmt  = conn.createStatement();
              ResultSet rs    = stmt.executeQuery(sql);
 
+            System.out.format("%-10s %-20s %-20s %-20s\n", "ROW_ID", "SERVICE", "USERNAME", "PASSWORD");
             // loop through the result set
             while (rs.next()) {
-                System.out.println(rs.getString("service") +  "\t" +
-                                   rs.getString("username") + "\t" +
+                System.out.format("%-10s %-20s %-20s %-20s\n",rs.getString("row_id"), 
+                                   rs.getString("service"),
+                                   rs.getString("username"),
                                    rs.getString("password"));
             }
         } catch (SQLException e) {

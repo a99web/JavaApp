@@ -16,7 +16,11 @@ public class Main {
 
         System.out.println("Please input any of the below options");
         System.out.println("**********************************************************\n");
-        System.out.println("1: To insert new row into the table\n2: To display the data for a particular service\n3: Display all\n4: Exit\n");
+        System.out.println("1: To insert new row into the table\n" +
+                           "2: To display the data for a particular service\n" +
+                           "3: Display all\n" +
+                           "4: Delete a row\n" +
+                           "5: Exit\n");
         System.out.println("**********************************************************\n");
 
         while(true) {
